@@ -17,6 +17,8 @@ public class GUI_Teste {
     
     static String nome = "Ismael";
     static int na;
+    static String validador;
+    static String operacao;
     
     public static void main(String args[]){
         
@@ -43,6 +45,65 @@ public class GUI_Teste {
         }
         
         frase = JOptionPane.showInputDialog(null,"Digite a "+(i+1)+"ª frase");
+        if((frase.contains("0")) || 
+           (frase.contains("1")) ||
+           (frase.contains("2")) ||
+           (frase.contains("3")) ||
+           (frase.contains("4")) ||
+           (frase.contains("5")) ||
+           (frase.contains("6")) ||
+           (frase.contains("7")) ||
+           (frase.contains("8")) ||
+           (frase.contains("9")) ||
+           (frase.contains("+")) ||
+           (frase.contains("-")) ||
+           (frase.contains("*")) ||
+           (frase.contains("/"))     
+          )
+        {
+            char[] numeros_separados = frase.toCharArray();
+            int[] numeros = new int[numeros_separados.length];
+            
+            for(int j = 0; j < numeros_separados.length; j++){//INICIO FOR
+                
+                JOptionPane.showMessageDialog(null,""+numeros_separados[j]+" "+(j+1)+" vez");
+                
+                validador = ""+numeros_separados[j];
+                
+                if(
+                  (!validador.equals("+")) &&
+                  (!validador.equals("-")) &&
+                  (!validador.equals("*")) &&
+                  (!validador.equals("/"))
+                ){
+                    numeros[j] = Integer.parseInt(""+numeros_separados[j]);
+                }
+                else
+                if(
+                  (validador.equals("+")) ||
+                  (validador.equals("-")) ||
+                  (validador.equals("*")) ||
+                  (validador.equals("/"))
+                ){
+                    operacao = validador;
+                }
+            }//FIM FOR
+                if(operacao.equals("+")){
+                    JOptionPane.showMessageDialog(null,""+(numeros[0]+numeros[2]));
+                }
+                else
+                if(operacao.equals("-")){
+                    JOptionPane.showMessageDialog(null,""+(numeros[0]-numeros[2]));
+                }
+                else
+                if(operacao.equals("*")){
+                    JOptionPane.showMessageDialog(null,""+(numeros[0]*numeros[2]));
+                }
+                else
+                if(operacao.equals("/")){
+                    JOptionPane.showMessageDialog(null,""+(numeros[0]/numeros[2]));
+                }
+        }
         frase = frase.replace(" ",";");
             String[] s = frase.split(";");
             
