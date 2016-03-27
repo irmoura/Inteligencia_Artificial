@@ -20,8 +20,9 @@ public class Tres_Frases {
     public void Tres_Frases(String p1, String p2, String p3){
 /*=======================================================================================================================================================*/
         if((p1.equals("que")) || (p1.equals("Que")) || (p1.equals("QUE"))){//QUE
-            if((p2.equals("horas")) || (p2.equals("Horas")) || (p2.equals("HORAS")) || (p1.equals("hora")) || (p1.equals("Hora")) || (p2.equals("HORA"))){//HORAS
-                if((p3.equals("são")) || (p3.equals("São")) || (p3.equals("SÃO")) || (p3.equals("sao")) || (p3.equals("Sao")) || (p3.equals("SAO"))){//SÃO
+        if((p2.equals("horas")) || (p2.equals("Horas")) || (p2.equals("HORAS")) || 
+           (p2.equals("hora")) || (p2.equals("Hora")) || (p2.equals("HORA"))){//HORAS
+        if((p3.equals("são")) || (p3.equals("São")) || (p3.equals("SÃO")) || (p3.equals("sao")) || (p3.equals("Sao")) || (p3.equals("SAO"))){//SÃO
                     Duas_Frases f2 = new Duas_Frases();
                     f2.Duas_Frases("que","horas");
                 }//SÃO
@@ -39,8 +40,8 @@ public class Tres_Frases {
         if(p1.equals("oi") || (p1.equals("Oi")) || (p1.equals("OI"))){//OI
             if(p2.equals("tudo") || (p2.equals("Tudo")) || (p2.equals("TUDO"))){//TUDO
                 if(p3.equals("bom") || (p3.equals("Bom")) || (p3.equals("BOM"))){//BOM
-                    Duas_Frases f2 = new Duas_Frases();
-                    f2.Duas_Frases("que","horas");
+                    Uma_Frase f1 = new Uma_Frase();
+                    f1.Uma_Frase("oi");
                 }//BOM
             }//TUDO
             else

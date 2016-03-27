@@ -5,9 +5,10 @@
  */
 package CODIGOS;
 
-import java.util.Calendar;
-import java.util.Random;
-import javax.swing.JOptionPane;
+import java.io.*;
+import java.util.*;
+import java.util.logging.*;
+import javax.swing.*;
 
 /**
  *
@@ -16,15 +17,65 @@ import javax.swing.JOptionPane;
 public class GUI_Teste {
     
     static String nome = JOptionPane.showInputDialog(null,"Qual seu nome ?","Artificial Inteligence",JOptionPane.QUESTION_MESSAGE);
+    
     static int na;
     static String validador;
     static String operacao;
     
-    public static void main(String args[]){
+    public static void main(String args[]) throws IOException{
+        
+        java.io.File Diretorio_Principal = new java.io.File("C:\\AI");
+        java.io.File Diretorio_Nomes = new java.io.File("C:\\AI\\Nomes");
+        java.io.File Diretorio_Cores = new java.io.File("C:\\AI\\Cores");
+        Diretorio_Principal.mkdir();
+        Diretorio_Nomes.mkdir();
+        Diretorio_Cores.mkdir();
+        
+        String Nome = nome;
+        
+        if (!Nome.equals(""))
+        {
+        
+        Nome = Nome+".txt";
+        
+        File dir = new File("C:\\AI\\Nomes");//LER
+        
+        File arq = new File(dir,Nome);//LER
+            try {
+                FileReader fileReader = new FileReader(arq);//LER
+                
+                if (Nome.equals(Nome))
+                {
+                    //JOptionPane.showMessageDialog(null,"Você optou por não alterar as informações atuais.");
+                    Nome = "";  
+                }
+                
+            } catch (FileNotFoundException ex) {
+                //System.out.println("Nome não encontrado");
+                //Logger.getLogger(GUI_Teste.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
+        java.io.File arquivo = new java.io.File(Diretorio_Nomes,Nome );
+        
+        if (Nome.equals("")){
+        //JOptionPane.showMessageDialog(null,"Eu já lhe conheço "+nome);    
+        }
+        else{
+        JOptionPane.showMessageDialog(null,"Prazer em conhecer "+nome);   
+        }
+        
+        try {
+            arquivo.createNewFile();
+        } catch (IOException ex) {
+            Logger.getLogger(GUI_Teste.class.getName()).log(Level.SEVERE, null, ex);
+    }       
+}       
+/*=======================================================================================================================================================*/        
         
         Uma_Frase f1 = new Uma_Frase();
         Duas_Frases f2 = new Duas_Frases();
         Tres_Frases f3 = new Tres_Frases();
+        Comandos cmd = new Comandos();
         
         int qnt = 12;//4
         String frase = "";
@@ -34,15 +85,7 @@ public class GUI_Teste {
         Random numero_aleatorio = new Random();
         na = numero_aleatorio.nextInt(4);//NUMEROS ALEATORIOS ENTRE 0 E 3
             
-        System.out.println("PC Diz: "+"Qual seu nome ?");
         f1.nome = nome;
-        if(!f1.nome.equals("")){
-            System.out.println(f1.nome+" Diz: "+f1.nome);
-        }
-        else
-        if(f1.nome.equals("")){
-            System.out.println("O usuário não informou o nome");
-        }
         
         frase = JOptionPane.showInputDialog(null,"Digite a "+(i+1)+"ª frase");
         if((frase.contains("0")) || 
@@ -125,8 +168,12 @@ public class GUI_Teste {
             f3.Tres_Frases(palavras_separadas[0], palavras_separadas[1], palavras_separadas[2]);
         }
         else
+        if(s.length == 5){
+            cmd.Comandos(palavras_separadas[0], palavras_separadas[1], palavras_separadas[2], palavras_separadas[3], palavras_separadas[4]);
+        }
+        else
         if(s.length > 3){
-            JOptionPane.showMessageDialog(null,"Frases com mais de duas palavras ainda não podem ser interpretadas ..."
+            JOptionPane.showMessageDialog(null,"Frases com mais de 3 palavras ainda não podem ser interpretadas ..."
             ,"Aviso",JOptionPane.WARNING_MESSAGE);
         }
         }

@@ -44,7 +44,8 @@ public class Uma_Frase {
 /*========================================================================================================================================================*/
         else
         if(
-          (p1.equals("horas")) || (p1.equals("Horas")) || (p1.equals("HORAS"))
+          ((p1.equals("horas")) || (p1.equals("Horas")) || (p1.equals("HORAS")) || 
+           (p1.equals("hora")) || (p1.equals("Hora")) || (p1.equals("HORA")))
           ){
             Duas_Frases f2 = new Duas_Frases();
             f2.Duas_Frases("que","horas");
@@ -52,7 +53,7 @@ public class Uma_Frase {
 /*========================================================================================================================================================*/
         else
         if(
-          (p1.equals("dia")) || (p1.equals("Dia")) || (p1.equals("DIA"))
+          ((p1.equals("dia")) || (p1.equals("Dia")) || (p1.equals("DIA")))
           ){
             Duas_Frases f2 = new Duas_Frases();
             f2.Duas_Frases("que","dia");
