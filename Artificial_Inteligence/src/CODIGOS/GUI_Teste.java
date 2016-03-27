@@ -22,6 +22,9 @@ public class GUI_Teste {
     static String validador;
     static String operacao;
     
+    static String operador_procurado, Depois, Antes;
+    static int antes_do_operador, depois_do_operador, depois, antes;
+    
     public static void main(String args[]) throws IOException{
         
         java.io.File Diretorio_Principal = new java.io.File("C:\\AI");
@@ -76,6 +79,7 @@ public class GUI_Teste {
         Duas_Frases f2 = new Duas_Frases();
         Tres_Frases f3 = new Tres_Frases();
         Comandos cmd = new Comandos();
+        Calculos_Diretos cd = new Calculos_Diretos();
         
         int qnt = 12;//4
         String frase = "";
@@ -88,6 +92,7 @@ public class GUI_Teste {
         f1.nome = nome;
         
         frase = JOptionPane.showInputDialog(null,"Digite a "+(i+1)+"ª frase");
+        
         if((frase.contains("0")) || 
            (frase.contains("1")) ||
            (frase.contains("2")) ||
@@ -103,50 +108,12 @@ public class GUI_Teste {
            (frase.contains("*")) ||
            (frase.contains("/"))     
           )
-        {
-            char[] numeros_separados = frase.toCharArray();
-            int[] numeros = new int[numeros_separados.length];
+        {//SE CONTEM OPERADORES
             
-            for(int j = 0; j < numeros_separados.length; j++){//INICIO FOR
-                
-                JOptionPane.showMessageDialog(null,""+numeros_separados[j]+" "+(j+1)+" vez");
-                
-                validador = ""+numeros_separados[j];
-                
-                if(
-                  (!validador.equals("+")) &&
-                  (!validador.equals("-")) &&
-                  (!validador.equals("*")) &&
-                  (!validador.equals("/"))
-                ){
-                    numeros[j] = Integer.parseInt(""+numeros_separados[j]);
-                }
-                else
-                if(
-                  (validador.equals("+")) ||
-                  (validador.equals("-")) ||
-                  (validador.equals("*")) ||
-                  (validador.equals("/"))
-                ){
-                    operacao = validador;
-                }
-            }//FIM FOR
-                if(operacao.equals("+")){
-                    JOptionPane.showMessageDialog(null,""+(numeros[0]+numeros[2]));
-                }
-                else
-                if(operacao.equals("-")){
-                    JOptionPane.showMessageDialog(null,""+(numeros[0]-numeros[2]));
-                }
-                else
-                if(operacao.equals("*")){
-                    JOptionPane.showMessageDialog(null,""+(numeros[0]*numeros[2]));
-                }
-                else
-                if(operacao.equals("/")){
-                    JOptionPane.showMessageDialog(null,""+(numeros[0]/numeros[2]));
-                }
-        }
+            String calculo = frase;
+            cd.Calculo(calculo);
+        
+        }//SE CONTEM OPERADORES
         frase = frase.replace(" ",";");
             String[] s = frase.split(";");
             
@@ -156,23 +123,23 @@ public class GUI_Teste {
             palavras_separadas[j] = s[j];
         }
         
-        if(s.length == 1){
+        if(s.length == 1 && !frase.contains("-") && !frase.contains("+") && !frase.contains("*") && !frase.contains("/")){
             f1.Uma_Frase(palavras_separadas[0]);
         }
         else
-        if(s.length == 2){
+        if(s.length == 2 && !frase.contains("-")){
             f2.Duas_Frases(palavras_separadas[0], palavras_separadas[1]);
         }
         else
-        if(s.length == 3){
+        if(s.length == 3 && !frase.contains("-")){
             f3.Tres_Frases(palavras_separadas[0], palavras_separadas[1], palavras_separadas[2]);
         }
         else
-        if(s.length == 5){
+        if(s.length == 5 && !frase.contains("-")){
             cmd.Comandos(palavras_separadas[0], palavras_separadas[1], palavras_separadas[2], palavras_separadas[3], palavras_separadas[4]);
         }
         else
-        if(s.length > 3){
+        if(s.length > 3 && !frase.contains("-")){
             JOptionPane.showMessageDialog(null,"Frases com mais de 3 palavras ainda não podem ser interpretadas ..."
             ,"Aviso",JOptionPane.WARNING_MESSAGE);
         }
