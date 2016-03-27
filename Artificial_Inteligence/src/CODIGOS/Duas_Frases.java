@@ -30,7 +30,22 @@ public class Duas_Frases {
             if(
           (p2.equals("horas")) || (p2.equals("Horas")) || (p2.equals("HORAS"))
           ){
-             JOptionPane.showMessageDialog(null,"Agora são "+hora+" horas e "+minuto+" minutos "+nome);   
+             if(t.na == 0){
+                 JOptionPane.showMessageDialog(null,"Agora são "+hora+" horas e "+minuto+" minutos "+nome);
+             }
+             else
+             if(t.na == 1){
+                 JOptionPane.showMessageDialog(null,"São "+hora+" e "+minuto+" "+nome);
+             }
+             else
+             if(t.na == 2){
+                 JOptionPane.showMessageDialog(null,"Neste momento "+hora+" e "+minuto+" "+nome);
+             }
+             else
+             if(t.na == 3){
+                 JOptionPane.showMessageDialog(null,hora+" e "+minuto+" "+nome);
+             }
+             
             }
             else
                 if(

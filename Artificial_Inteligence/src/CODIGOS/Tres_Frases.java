@@ -22,10 +22,11 @@ public class Tres_Frases {
         if((p1.equals("que")) || (p1.equals("Que")) || (p1.equals("QUE"))){//QUE
         if((p2.equals("horas")) || (p2.equals("Horas")) || (p2.equals("HORAS")) || 
            (p2.equals("hora")) || (p2.equals("Hora")) || (p2.equals("HORA"))){//HORAS
-        if((p3.equals("são")) || (p3.equals("São")) || (p3.equals("SÃO")) || (p3.equals("sao")) || (p3.equals("Sao")) || (p3.equals("SAO"))){//SÃO
+        if((p3.equals("são")) || (p3.equals("São")) || (p3.equals("SÃO")) || (p3.equals("sao")) || (p3.equals("Sao")) || (p3.equals("SAO")) || 
+           (p3.equals("agora")) || (p3.equals("Agora")) || (p3.equals("AGORA"))){
                     Duas_Frases f2 = new Duas_Frases();
                     f2.Duas_Frases("que","horas");
-                }//SÃO
+                }
             }//HORAS
             else
             if(p2.equals("dia") || (p2.equals("Dia")) || (p2.equals("DIA"))){//DIA

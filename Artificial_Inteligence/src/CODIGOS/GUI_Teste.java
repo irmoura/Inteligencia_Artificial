@@ -18,12 +18,8 @@ public class GUI_Teste {
     
     static String nome = JOptionPane.showInputDialog(null,"Qual seu nome ?","Artificial Inteligence",JOptionPane.QUESTION_MESSAGE);
     
-    static int na;
-    static String validador;
-    static String operacao;
-    
     static String operador_procurado, Depois, Antes;
-    static int antes_do_operador, depois_do_operador, depois, antes;
+    static int antes_do_operador, depois_do_operador, depois, antes, na;
     
     public static void main(String args[]) throws IOException{
         
