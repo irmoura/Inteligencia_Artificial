@@ -18,6 +18,7 @@ public class Tres_Frases {
     String nome = t.nome;
     
     public void Tres_Frases(String p1, String p2, String p3){
+/*=======================================================================================================================================================*/
         if((p1.equals("que")) || (p1.equals("Que")) || (p1.equals("QUE"))){//QUE
             if((p2.equals("horas")) || (p2.equals("Horas")) || (p2.equals("HORAS")) || (p1.equals("hora")) || (p1.equals("Hora")) || (p2.equals("HORA"))){//HORAS
                 if((p3.equals("são")) || (p3.equals("São")) || (p3.equals("SÃO")) || (p3.equals("sao")) || (p3.equals("Sao")) || (p3.equals("SAO"))){//SÃO
@@ -33,6 +34,7 @@ public class Tres_Frases {
                 }//HOJE
             }//DIA
         }//QUE
+/*=======================================================================================================================================================*/
         else
         if(p1.equals("oi") || (p1.equals("Oi")) || (p1.equals("OI"))){//OI
             if(p2.equals("tudo") || (p2.equals("Tudo")) || (p2.equals("TUDO"))){//TUDO
@@ -49,8 +51,9 @@ public class Tres_Frases {
                 }//HOJE
             }//DIA
         }//OI
+/*=======================================================================================================================================================*/
         else
-        if((p1.equals("eu")) || (p1.equals("Eu")) || (p1.equals("EU"))){//EU
+        if((p1.equals("eu")) || (p1.equals("Eu")) || (p1.equals("EU"))){
         if((p2.equals("amo")) || (p2.equals("Amo")) || (p2.equals("AMO")) ||
            (p2.equals("lhe")) || (p2.equals("Lhe")) || (p2.equals("LHE")) ||
            (p2.equals("TE")) || (p2.equals("Te")) || (p2.equals("te"))){
@@ -61,15 +64,39 @@ public class Tres_Frases {
                     JOptionPane.showMessageDialog(null,"Eu também te amo "+nome);
                 }
             }
-        }//EU
+        }
+/*=======================================================================================================================================================*/
         else
-        if((p1.equals("qual")) || (p1.equals("Qual")) || (p1.equals("QUAL"))){//QUAL
+        if((p1.equals("qual")) || (p1.equals("Qual")) || (p1.equals("QUAL"))){
             if((p2.equals("seu")) || (p2.equals("Seu")) || (p2.equals("SEU")) ||
               ((p2.equals("teu")) || (p2.equals("Teu")) || (p2.equals("TEU")))){
                 if(p3.equals("nome") || (p3.equals("Nome")) || (p3.equals("NOME"))){
                     JOptionPane.showMessageDialog(null,"Ainda não tenho um nome "+nome);
                 }
             }
-        }//QUAL
+        }
+/*=======================================================================================================================================================*/
+        else
+        if((p1.equals("como")) || (p1.equals("Como")) || (p1.equals("COMO"))){
+            if((p2.equals("vai")) || (p2.equals("Vai")) || (p2.equals("VAI")) ||
+              ((p2.equals("esta")) || (p2.equals("Esta")) || (p2.equals("ESTA")) ||
+              ((p2.equals("está")) || (p2.equals("Está")) || (p2.equals("ESTÁ"))))){
+                if(p3.equals("voce") || (p3.equals("Voce")) || (p3.equals("VOCE"))){
+                    JOptionPane.showMessageDialog(null,"Estou bem "+nome+" obrigado");
+                }
+            }
+        }
+/*=======================================================================================================================================================*/
+        else
+        if((p1.equals("voce")) || (p1.equals("Voce")) || (p1.equals("VOCE")) || (p1.equals("você")) || (p1.equals("Você")) || (p1.equals("VOCÊ")) || (p1.equals("vc")) || (p1.equals("Vc")) || (p1.equals("VC"))){
+            if((p2.equals("ta")) || (p2.equals("Ta")) || (p2.equals("TA")) ||
+               (p2.equals("tá")) || (p2.equals("Tá")) || (p2.equals("TÁ")) ||
+              ((p2.equals("esta")) || (p2.equals("Esta")) || (p2.equals("ESTA")) ||
+              ((p2.equals("está")) || (p2.equals("Está")) || (p2.equals("ESTÁ"))))){
+                if(p3.equals("bem") || (p3.equals("Bem")) || (p3.equals("BEM"))){
+                    JOptionPane.showMessageDialog(null,"Estou bem "+nome+" obrigado");
+                }
+            }
+        }
     }
 }

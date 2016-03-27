@@ -25,7 +25,7 @@ public class Duas_Frases {
     public void Duas_Frases(String p1, String p2){
         
         if(
-          (p1.equals("que")) || (p1.equals("Que")) || (p1.equals("QUE"))
+          (p1.equals("que")) || (p1.equals("Que")) || (p1.equals("QUE") || (p1.equals("qual")) || (p1.equals("Qual")) || (p1.equals("QUAL")))
           ){//INICIO COMEÇANDO COM QUE
             if(
           (p2.equals("horas")) || (p2.equals("Horas")) || (p2.equals("HORAS"))
@@ -121,6 +121,22 @@ public class Duas_Frases {
         }//COMO
         else
         if(
+          (p1.equals("amo")) || (p1.equals("Amo")) || (p1.equals("AMO"))
+          ){//AMO
+            if(
+          (p2.equals("voce")) ||
+          (p2.equals("Voce")) ||
+          (p2.equals("VOCE")) ||
+          (p2.equals("você")) ||
+          (p2.equals("Você")) ||
+          (p2.equals("VOCÊ"))
+          ){
+                Tres_Frases f3 = new Tres_Frases();
+                f3.Tres_Frases("eu","te","amo");
+            }
+        }//AMO
+        else
+        if(
           (p1.equals("oi")) || (p1.equals("Oi")) || (p1.equals("OI"))
           ){//OI
             if(
@@ -133,6 +149,25 @@ public class Duas_Frases {
           ){
                 Uma_Frase f1 = new Uma_Frase();
                 f1.Uma_Frase("oi");
+            }
+        }//OI
+        else
+        if(
+          (p1.equals("tem")) || (p1.equals("Tem")) || (p1.equals("TEM"))
+          ){//OI
+            if(
+          (p2.equals("filhos")) ||
+          (p2.equals("Filhos")) ||
+          (p2.equals("FILHOS")) ||
+          (p2.equals("crianca")) ||
+          (p2.equals("Crianca")) ||
+          (p2.equals("CRIANCA") ||
+          (p2.equals("criança")) ||
+          (p2.equals("Criança")) ||
+          (p2.equals("CRIANÇA"))
+          )
+          ){
+                JOptionPane.showMessageDialog(null,"Sou um programa e não posso ter essas coisas");
             }
         }//OI
         else
