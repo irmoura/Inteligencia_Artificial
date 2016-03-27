@@ -33,6 +33,12 @@ public class Duas_Frases {
              JOptionPane.showMessageDialog(null,"Agora são "+hora+" horas e "+minuto+" minutos "+nome);   
             }
             else
+                if(
+          (p2.equals("cidade")) || (p2.equals("Cidade")) || (p2.equals("CIDADE"))
+          ){
+             JOptionPane.showMessageDialog(null,"Atualmente moro no mesmo lugar que você "+nome);   
+            }
+            else
            if(
           (p2.equals("dia")) || (p2.equals("Dia")) || (p2.equals("DIA"))
           ){
@@ -159,6 +165,9 @@ public class Duas_Frases {
           (p2.equals("filhos")) ||
           (p2.equals("Filhos")) ||
           (p2.equals("FILHOS")) ||
+          (p2.equals("filho")) ||
+          (p2.equals("Filho")) ||
+          (p2.equals("FILHO")) ||
           (p2.equals("crianca")) ||
           (p2.equals("Crianca")) ||
           (p2.equals("CRIANCA") ||
@@ -190,5 +199,27 @@ public class Duas_Frases {
                 f1.Uma_Frase("oi");
             }
         }//TUDO
+/*======================================================================================================================================================*/
+        else
+        if((p1.equals("mora")) || (p1.equals("Mora")) || (p1.equals("MORA"))){
+            if((p2.equals("onde")) || (p2.equals("Onde")) || (p2.equals("ONDE"))){
+                JOptionPane.showMessageDialog(null,"Atualmente moro no mesmo lugar que você "+nome);
+            }
+        }
+/*======================================================================================================================================================*/
+        else
+        if((p1.equals("voce")) || (p1.equals("Voce")) || (p1.equals("VOCE")) || (p1.equals("você")) ||
+           (p1.equals("Você")) || (p1.equals("VOCÊ")) || (p1.equals("vc")) || (p1.equals("Vc")) || (p1.equals("VC"))){
+            if((p2.equals("trabalha")) || (p2.equals("Trabalha")) || (p2.equals("TRABALHA"))){
+                JOptionPane.showMessageDialog(null,"Sou um programa e não posso ter essas coisas");
+            }
+        }
+/*======================================================================================================================================================*/
+        else
+        if((p1.equals("e")) || (p1.equals("E")) || (p1.equals("é")) || (p1.equals("É"))){
+            if((p2.equals("casado")) || (p2.equals("Casado")) || (p2.equals("CASADO")) || (p2.equals("casada")) || (p2.equals("Casada")) || (p2.equals("CASADA"))){
+                JOptionPane.showMessageDialog(null,"Sou um programa e não posso ter essas coisas");
+            }
+        }
     }
 }
