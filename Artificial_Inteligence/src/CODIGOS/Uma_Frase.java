@@ -21,12 +21,8 @@ public class Uma_Frase {
     public void Uma_Frase(String p1){
         
         if(
-          (p1.equals("oi")) ||
-          (p1.equals("OI")) ||
-          (p1.equals("olá")) ||
-          (p1.equals("OLÁ")) ||
-          (p1.equals("ola")) ||
-          (p1.equals("OLA"))
+          (p1.equals("oi")) || (p1.equals("Oi")) || (p1.equals("OI")) || 
+          (p1.equals("olá")) || (p1.equals("Olá")) || (p1.equals("OLÁ")) || (p1.equals("ola")) || (p1.equals("Ola")) || (p1.equals("OLA"))
           ){//INICIO CUMPRIMENTOS
             
             if(t.na == 0){
@@ -51,16 +47,14 @@ public class Uma_Frase {
         }//FIM CUMPRIMENTOS
         else
         if(
-          (p1.equals("horas")) ||
-          (p1.equals("HORAS"))
+          (p1.equals("horas")) || (p1.equals("Horas")) || (p1.equals("HORAS"))
           ){
             Duas_Frases f2 = new Duas_Frases();
             f2.Duas_Frases("que","horas");
         }
         else
         if(
-          (p1.equals("dia")) ||
-          (p1.equals("DIA"))
+          (p1.equals("dia")) || (p1.equals("Dia")) || (p1.equals("DIA"))
           ){
             Duas_Frases f2 = new Duas_Frases();
             f2.Duas_Frases("que","dia");

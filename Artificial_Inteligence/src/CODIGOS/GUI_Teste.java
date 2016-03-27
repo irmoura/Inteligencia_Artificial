@@ -15,7 +15,7 @@ import javax.swing.JOptionPane;
  */
 public class GUI_Teste {
     
-    static String nome = "Ismael";
+    static String nome = JOptionPane.showInputDialog(null,"Qual seu nome ?","Artificial Inteligence",JOptionPane.QUESTION_MESSAGE);
     static int na;
     static String validador;
     static String operacao;
@@ -26,7 +26,7 @@ public class GUI_Teste {
         Duas_Frases f2 = new Duas_Frases();
         Tres_Frases f3 = new Tres_Frases();
         
-        int qnt = 4;
+        int qnt = 12;//4
         String frase = "";
         
         for(int i = 0; i < qnt; i++){
@@ -35,7 +35,7 @@ public class GUI_Teste {
         na = numero_aleatorio.nextInt(4);//NUMEROS ALEATORIOS ENTRE 0 E 3
             
         System.out.println("PC Diz: "+"Qual seu nome ?");
-        f1.nome = nome;//JOptionPane.showInputDialog(null,"Qual seu nome ?","Artificial Inteligence",JOptionPane.QUESTION_MESSAGE);
+        f1.nome = nome;
         if(!f1.nome.equals("")){
             System.out.println(f1.nome+" Diz: "+f1.nome);
         }

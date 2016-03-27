@@ -12,27 +12,62 @@ import javax.swing.JOptionPane;
  * @author Mael
  */
 public class Tres_Frases {
-    public static void Tres_Frases(String p1, String p2, String p3){
-        if(p1.equals("que")){//QUE
-            if(p2.equals("horas")){//HORAS
-                if(p3.equals("são")){//SÃO
+    
+    GUI_Teste t = new GUI_Teste();
+    
+    String nome = t.nome;
+    
+    public void Tres_Frases(String p1, String p2, String p3){
+        if((p1.equals("que")) || (p1.equals("Que")) || (p1.equals("QUE"))){//QUE
+            if((p2.equals("horas")) || (p2.equals("Horas")) || (p2.equals("HORAS")) || (p1.equals("hora")) || (p1.equals("Hora")) || (p2.equals("HORA"))){//HORAS
+                if((p3.equals("são")) || (p3.equals("São")) || (p3.equals("SÃO")) || (p3.equals("sao")) || (p3.equals("Sao")) || (p3.equals("SAO"))){//SÃO
                     Duas_Frases f2 = new Duas_Frases();
                     f2.Duas_Frases("que","horas");
                 }//SÃO
             }//HORAS
             else
-            if(p2.equals("dia")){//DIA
-                if(p3.equals("hoje")){//HOJE
+            if(p2.equals("dia") || (p2.equals("Dia")) || (p2.equals("DIA"))){//DIA
+                if(p3.equals("hoje") || (p3.equals("Hoje")) || (p3.equals("HOJE"))){//HOJE
                     Duas_Frases f2 = new Duas_Frases();
                     f2.Duas_Frases("que", "dia");
                 }//HOJE
             }//DIA
         }//QUE
         else
-        if(p1.equals("qual")){//QUAL
-            if(p2.equals("seu")){
-                if(p3.equals("nome")){
-                    JOptionPane.showMessageDialog(null,"Ainda não tenho um nome");
+        if(p1.equals("oi") || (p1.equals("Oi")) || (p1.equals("OI"))){//OI
+            if(p2.equals("tudo") || (p2.equals("Tudo")) || (p2.equals("TUDO"))){//TUDO
+                if(p3.equals("bom") || (p3.equals("Bom")) || (p3.equals("BOM"))){//BOM
+                    Duas_Frases f2 = new Duas_Frases();
+                    f2.Duas_Frases("que","horas");
+                }//BOM
+            }//TUDO
+            else
+            if(p2.equals("dia") || (p2.equals("Dia")) || (p2.equals("DIA"))){//DIA
+                if(p3.equals("hoje") || (p3.equals("Hoje")) || (p3.equals("HOJE"))){//HOJE
+                    Duas_Frases f2 = new Duas_Frases();
+                    f2.Duas_Frases("que", "dia");
+                }//HOJE
+            }//DIA
+        }//OI
+        else
+        if((p1.equals("eu")) || (p1.equals("Eu")) || (p1.equals("EU"))){//EU
+        if((p2.equals("amo")) || (p2.equals("Amo")) || (p2.equals("AMO")) ||
+           (p2.equals("lhe")) || (p2.equals("Lhe")) || (p2.equals("LHE")) ||
+           (p2.equals("TE")) || (p2.equals("Te")) || (p2.equals("te"))){
+        if((p3.equals("voce")) || (p3.equals("Voce")) || (p3.equals("VOCE")) || (p3.equals("você")) || (p3.equals("Você")) || (p3.equals("VOCÊ")) || 
+           (p3.equals("amo")) || (p3.equals("Amo")) || (p3.equals("AMO")) || 
+           (p3.equals("vc")) || (p3.equals("Vc")) || (p3.equals("VC")) ||
+           (p3.equals("tu")) || (p3.equals("Tu")) || (p3.equals("TU"))){
+                    JOptionPane.showMessageDialog(null,"Eu também te amo "+nome);
+                }
+            }
+        }//EU
+        else
+        if((p1.equals("qual")) || (p1.equals("Qual")) || (p1.equals("QUAL"))){//QUAL
+            if((p2.equals("seu")) || (p2.equals("Seu")) || (p2.equals("SEU")) ||
+              ((p2.equals("teu")) || (p2.equals("Teu")) || (p2.equals("TEU")))){
+                if(p3.equals("nome") || (p3.equals("Nome")) || (p3.equals("NOME"))){
+                    JOptionPane.showMessageDialog(null,"Ainda não tenho um nome "+nome);
                 }
             }
         }//QUAL
