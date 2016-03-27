@@ -68,10 +68,21 @@ public class Tres_Frases {
 /*=======================================================================================================================================================*/
         else
         if((p1.equals("qual")) || (p1.equals("Qual")) || (p1.equals("QUAL"))){
-            if((p2.equals("seu")) || (p2.equals("Seu")) || (p2.equals("SEU")) ||
-              ((p2.equals("teu")) || (p2.equals("Teu")) || (p2.equals("TEU")))){
-                if(p3.equals("nome") || (p3.equals("Nome")) || (p3.equals("NOME"))){
+            if((p2.equals("seu")) || (p2.equals("Seu")) || (p2.equals("SEU")) || 
+               (p2.equals("sua")) || (p2.equals("Sua")) || (p2.equals("SUA")) ||
+               (p2.equals("teu")) || (p2.equals("Teu")) || (p2.equals("TEU")) || 
+               (p2.equals("tua")) || (p2.equals("Tua")) || (p2.equals("TUA"))
+              ){
+                if((p3.equals("nome")) || (p3.equals("Nome")) || (p3.equals("NOME"))){
                     JOptionPane.showMessageDialog(null,"Ainda não tenho um nome "+nome);
+                }
+                else
+                if((p3.equals("telefone")) || (p3.equals("Telefone")) || (p3.equals("TELEFONE")) || (p3.equals("tel")) || (p3.equals("Tel")) || (p3.equals("TEL"))){
+                    JOptionPane.showMessageDialog(null,"Ainda não tenho um telefone "+nome);
+                }
+                else
+                if((p3.equals("cidade")) || (p3.equals("Cidade")) || (p3.equals("CIDADE"))){
+                    JOptionPane.showMessageDialog(null,"Moro na mesma cidade que você "+nome);
                 }
             }
         }
